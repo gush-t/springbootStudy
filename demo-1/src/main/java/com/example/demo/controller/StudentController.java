@@ -20,7 +20,6 @@ public class StudentController {
 	@ResponseBody
 	public List<Student> getAllStudent() {
 		
-		
 		return studentService.findAllStudent();
 		
 	}
