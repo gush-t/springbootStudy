@@ -26,15 +26,15 @@ public class TestDateTime {
 	
 	@Test
 	public void testCaculator() {
-		int nubOne = 1;
-		int nubTwo = 3;
+		double nubOne = 1;
+		double nubTwo = 3;
 		String operate = "+";
-		String strResult = "";
+		Double resultDouble = 0d;
 		String strOperate = "+-*/";
 		if(strOperate.contains(operate.trim())) {
-			strResult = nubOne + operate.trim()+ nubTwo;
+			resultDouble = 0d;
 		}
-		System.out.println(strResult);
+		System.out.println(resultDouble);
 	}
 
 }
