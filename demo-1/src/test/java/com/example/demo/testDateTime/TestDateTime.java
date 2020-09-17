@@ -35,6 +35,7 @@ public class TestDateTime {
 			resultDouble = 0d;
 		}
 		System.out.println(resultDouble);
+		
 	}
 
 }
