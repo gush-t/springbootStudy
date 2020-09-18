@@ -13,6 +13,7 @@ public class CaculatorAdd extends OperaterCaculator {
 		result = numberA.add(numberB);
 		return result;
 
+		
 	}
 
 }
