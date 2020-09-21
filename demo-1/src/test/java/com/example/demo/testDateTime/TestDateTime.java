@@ -1,10 +1,11 @@
 package com.example.demo.testDateTime;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 public class TestDateTime {
 	
@@ -34,9 +35,14 @@ public class TestDateTime {
 		if(strOperate.contains(operate.trim())) {
 			resultDouble = 0d;
 		}
-		System.out.println(resultDouble);
-		
-		
+		System.out.println(resultDouble);		
 	}
 
+	@Test
+	public void  testFloatDouble() {
+		double nub01 = 1.4;
+		double nub02 = 1.9;
+		assertThat(0.5).isEqualTo(nub02-nub01);
+		System.out.println(nub02-nub01);
+	}
 }
