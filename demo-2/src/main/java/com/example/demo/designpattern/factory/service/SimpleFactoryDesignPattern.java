@@ -1,16 +1,15 @@
 package com.example.demo.designpattern.factory.service;
 
-import java.math.BigDecimal;
-
 public class SimpleFactoryDesignPattern {
 
-	public OperaterCaculator createCaculator(String operate) {
-		OperaterCaculator caculator = new OperaterCaculator();
+	public static OperaterCaculator createCaculator(String operate) {
+		OperaterCaculator caculator = null ;
 		switch (operate) {
 		case "+":
 			caculator = new CaculatorAdd();
 			break;
-
+		case "-":
+			caculator = new CaculatorSubtract();
 		default:
 			break;
 		}

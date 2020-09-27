@@ -7,7 +7,7 @@ import java.math.BigDecimal;
  * @author TRS
  *
  */
-public class OperaterCaculator {
+public abstract  class OperaterCaculator {
 	
 	private BigDecimal numberA;
 	
@@ -22,12 +22,7 @@ public class OperaterCaculator {
 	}
 	
 	
-	public BigDecimal getResult() {
-		
-		
-		return result;
-		
-	}
+	public abstract BigDecimal getResult();
 
 	public BigDecimal getNumberA() {
 		return numberA;
