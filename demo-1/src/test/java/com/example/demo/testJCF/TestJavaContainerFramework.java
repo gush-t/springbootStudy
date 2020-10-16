@@ -3,6 +3,10 @@ package com.example.demo.testJCF;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,11 +15,16 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.Callable;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 import org.junit.jupiter.api.Test;
 
@@ -106,7 +115,11 @@ public class TestJavaContainerFramework {
 		// TreeSet 
 		
 		TreeSet<Student> stuTreeSet = new TreeSet<>();
-		
+		stuTreeSet.addAll(stuHashSet);
+		stuTreeSet.stream().map(s -> s.getStuNo()).count(); 
+		LinkedHashSet<Student> stuLinkedHashSet = new LinkedHashSet<>();
+		stuLinkedHashSet.addAll(stuList);
+		stuLinkedHashSet.forEach(System.out::println);
 	}
 	
 	@Test
@@ -133,7 +146,29 @@ public class TestJavaContainerFramework {
 			Integer integer = (Integer) iterator2.next();
 			System.out.println("key:"+integer+" value:"+stuMap.get(integer));
 		}
-		
+		stuMap.entrySet().stream().filter(s -> (s.getKey()>5)).forEach((x) -> System.out.println(x.getKey()));
+		stuMap.remove(5);
+	}
+	
+	@Test
+	public void testDateTime() {
+		final String pattern  = "yyyyMMdd";
+		DateTimeFormatter dateTime = DateTimeFormatter.ofPattern(pattern,Locale.CHINA);
+		LocalDate localDate = LocalDate.now();
+		LocalTime localTime = LocalTime.now();
+		LocalDate localDateStr = LocalDate.parse("20190801", dateTime);
+		//System.out.println(localTime.format(dateTime));
+		System.out.println(localDate.format(dateTime));
+		assertThat("2019-08-01").isEqualTo(localDateStr.toString());
+	}
+	
+	@Test
+	public void testFourFunctionInterface() {
+		testConsumer(200.00, (x) -> System.out.println(x));		
+	}
+	
+	public void testConsumer(Double money,Consumer<Double> t) {
+		t.accept(money);
 	}
 	
 	@Test
