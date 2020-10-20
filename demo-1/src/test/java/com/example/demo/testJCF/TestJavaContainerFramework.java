@@ -133,7 +133,14 @@ public class TestJavaContainerFramework {
 		stuMap.putIfAbsent(8, new Student());
 		stuMap.putIfAbsent(5, new Student());
 		
+		HashMap<Integer, Student> stuMap2 = new HashMap<>();
+		stuMap2.put(9, new Student());
+		stuMap2.put(10, new Student());
+		stuMap2.put(11, new Student());
+		stuMap2.put(12, new Student());
+		stuMap2.put(13, new Student());
 		
+		stuMap.putAll(stuMap2);
 		//foreach entrySet
 		 Iterator<Entry<Integer, Student>> iterator = stuMap.entrySet().iterator();
 		while (iterator.hasNext()) {
