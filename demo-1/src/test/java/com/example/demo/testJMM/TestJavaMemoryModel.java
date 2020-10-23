@@ -1,5 +1,7 @@
 package com.example.demo.testJMM;
 
+import java.sql.Connection;
+
 import org.junit.jupiter.api.Test;
 
 public class TestJavaMemoryModel {
@@ -18,8 +20,9 @@ public class TestJavaMemoryModel {
 		Thread[] threads = new Thread[THREAD_COUNT];
 		for (int i = 0; i < threads.length; i++) {
 			threads[i] = new Thread(() -> increase());
+			System.out.println(threads[i].getName() +" "+threads[i].getState());
 			threads[i].start();
-			System.out.println(threads[i].getState());
+			System.out.println(threads[i].getName() +" "+threads[i].getState());
 			System.out.println(threads[i].getPriority());
 			
 		}

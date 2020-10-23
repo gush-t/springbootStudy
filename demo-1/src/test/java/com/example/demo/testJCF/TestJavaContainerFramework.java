@@ -20,11 +20,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map.Entry;
+import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.PriorityBlockingQueue;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
@@ -74,8 +79,10 @@ public class TestJavaContainerFramework {
 		stuList.stream().distinct().forEach(System.out::println);
 		//Sort
 		System.out.println("sorted");
-		stuList.stream().sorted().forEach(System.out::println);
-		Collections.reverse(stuList);
+	     List<Student> collect = stuList.stream().sorted().collect(Collectors.toList()); 
+	     collect.stream().forEach(System.out::println);
+		Collections.reverse(collect);
+		 collect.stream().forEach(System.out::println);
 		ArrayList<Student> capaCity = new ArrayList<>(10000);
 		Collections.fill(capaCity, new Student(201488L, 899));
 		System.out.println("hello world");
@@ -157,6 +164,59 @@ public class TestJavaContainerFramework {
 		stuMap.remove(5);
 	}
 	
+	
+	@Test
+	public void testQueue() {
+		ArrayBlockingQueue<String> arrayQueue = new ArrayBlockingQueue<>(10, false);
+		arrayQueue.add("gu");//illegalStateException if this queue full
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		arrayQueue.add("gu");
+		
+		//String remove = arrayQueue.remove();
+		//System.out.println("array: "+remove);
+		try {
+			arrayQueue.put("shao");
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		//String remove = arrayQueue.remove();
+		System.out.println(arrayQueue.poll());
+		for (String string : arrayQueue) {
+			System.out.println(arrayQueue.poll());
+		}
+		for (String string : arrayQueue) {
+			System.out.println(arrayQueue.poll());
+		}
+		LinkedBlockingQueue<String> linkedQueue = new LinkedBlockingQueue<>(1);
+		linkedQueue.add("gu");
+		//linkedQueue.add("shao");
+		try {
+			//String remove = linkedQueue.remove();
+			//System.out.println("linked: "+remove);
+			linkedQueue.put("shao");
+			//String remove = linkedQueue.remove();
+			System.out.println(linkedQueue.peek());
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		
+		
+		PriorityBlockingQueue<String> priorityQueue = new PriorityBlockingQueue<>(1);
+		priorityQueue.add("gu");
+		priorityQueue.add("shao");
+		priorityQueue.put("shao");
+		
+		
+	}
 	@Test
 	public void testDateTime() {
 		final String pattern  = "yyyyMMdd";
