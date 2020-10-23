@@ -229,6 +229,10 @@ public class TestJavaContainerFramework {
 		assertThat("2019-08-01").isEqualTo(localDateStr.toString());
 	}
 	
+	/**
+	*ni hao
+	*/
+	
 	@Test
 	public void testFourFunctionInterface() {
 		testConsumer(200.00, (x) -> System.out.println(x));		
