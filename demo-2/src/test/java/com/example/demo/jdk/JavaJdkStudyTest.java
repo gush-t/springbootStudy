@@ -95,4 +95,6 @@ public class JavaJdkStudyTest {
 		}	
 		
 	}
+	//定个小目标，一个编程题，一个设计模式，一日一练
+	
 }
