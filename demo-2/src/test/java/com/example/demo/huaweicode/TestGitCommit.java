@@ -7,6 +7,7 @@ public class TestGitCommit {
     @Test
     public  void test(){
         System.out.println("x");
+        System.out.println("y");
     }
     @Test
     public  void  testCommit(){
