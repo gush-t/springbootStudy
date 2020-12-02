@@ -35,7 +35,8 @@ public class JavaJdkStudyTest {
 		assertThat(new BigDecimal("7.000")).isEqualTo(number01.subtract(number02).setScale(3));
 		assertThat(new BigDecimal("30")).isEqualTo(number01.multiply(number02));
 		assertThat(new BigDecimal("3.333")).isEqualTo(number01.divide(number02,3,BigDecimal.ROUND_HALF_UP));
-		
+
+
 	}
 	
 	/**
