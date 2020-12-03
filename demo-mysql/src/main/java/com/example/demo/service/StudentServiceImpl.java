@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.criteria.Predicate;
@@ -31,6 +32,21 @@ public class StudentServiceImpl implements StudentService {
 			return criteriaBuilder.and(equal);	
 		}, pageable);
 		return findStudentByClass;
+	}
+
+	@Override
+	public void save(Student stu) {
+		studentDao.save(stu);
+	}
+
+	@Override
+	public void deleteById(Integer stuId) {
+		studentDao.deleteById(stuId);
+	}
+
+	@Override
+	public List<Student> findAll() {
+		return studentDao.findAll();
 	}
 
 	@Override

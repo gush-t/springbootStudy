@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+@Table(name = "student")
 @Entity
 public class Student implements Serializable {
 	
@@ -20,6 +20,7 @@ public class Student implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO )
+	@Column(name = "`stuId`")
 	public Integer stuId;
 	
 	@Column(name = "`STUNAME`")
