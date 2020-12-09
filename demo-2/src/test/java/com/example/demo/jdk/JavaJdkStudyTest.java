@@ -6,10 +6,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -17,7 +15,30 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class JavaJdkStudyTest {
 	
 	public static List<String> listStatic  = new ArrayList<>(); 
-	
+
+	@Test
+	public void copyAndWriteTest(){
+		String[] strArrays = {"gu","is","hua","shi","handsome"};
+		List<String> list = new CopyOnWriteArrayList<>(Arrays.asList(strArrays));
+		List<String> listArray = new ArrayList<>(Arrays.asList(strArrays));
+		Iterator iterator =  list.iterator();
+		Iterator iteratorArray = listArray.iterator();
+		while (iteratorArray.hasNext()){
+			String string = (String) iteratorArray.next();
+			System.out.println(string);
+			if ("shi".equals(string)){
+				iteratorArray.remove();
+			}
+		}
+		for (String str: list) {
+			if (str.equals("hua")){
+				list.remove("gu");
+			}
+		}
+		System.out.println(list);
+	}
+
+
 	@Test
 	public void  testFloatDouble() {
 		double nub01 = 0.1;
