@@ -213,7 +213,7 @@ public class TestThreadPool {
 			new ThreadPoolExecutor.AbortPolicy());
 		//schedulePool.schedule(threadTask,0, TimeUnit.SECONDS);
 		for (int i = 0; i < 100; i++) {
-			schedulePool.scheduleAtFixedRate(threadTask, 0, 100, TimeUnit.SECONDS);
+			schedulePool.scheduleAtFixedRate(threadTask, 0, 1, TimeUnit.SECONDS);
 
 		}
 		//System.out.println("1");
