@@ -10,6 +10,7 @@ public class JsonTest {
 	
 	@Test
 	public void jsonUrlTest() {
+
 		String jsonStr = "{\r\n" + 
 				"	\"code\": 0,\r\n" + 
 				"	\"result\": [{\r\n" + 
