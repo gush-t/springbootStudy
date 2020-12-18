@@ -2,11 +2,9 @@ package com.example.demo.json;
 
 import org.junit.jupiter.api.Test;
 
-import cn.hutool.json.JSON;
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
 
 public class JsonTest {
+	/*
 	
 	@Test
 	public void jsonUrlTest() {
@@ -40,5 +38,7 @@ public class JsonTest {
 		JSONObject json = JSONUtil.parseObj(jsonStr);
 		System.out.println(json.getInt("totalCount"));
 	}
+
+	 */
 
 }
