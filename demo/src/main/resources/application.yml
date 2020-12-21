@@ -1,0 +1,32 @@
+#datasource
+spring:
+  datasource:
+    name: testDatasource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot
+    username: root
+    password: gu784341
+    # 使用druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    #建表
+    schema: classpath:schema.sql
+
+#mybatis 配置
+mybatis:
+  #dao接口映射
+  mapper-locations: classpath:mapper/*Mapper.xml
+  #实体类
+  type-aliases-package: com.example.mybatis.demo.entity
