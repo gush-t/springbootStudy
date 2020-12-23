@@ -23,6 +23,7 @@ spring:
     maxOpenPreparedStatements: 20
     #建表
     schema: classpath:schema.sql
+    initialization-mode: always
 
 #mybatis 配置
 mybatis:
