@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-2/demo-2.iml" filepath="$PROJECT_DIR$/demo-2/demo-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-mysql/demo-mysql.iml" filepath="$PROJECT_DIR$/demo-mysql/demo-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-api/demoThree-api.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-api/demoThree-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-dao/demoThree-dao.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-dao/demoThree-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-manager/demoThree-manager.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-manager/demoThree-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-service/demoThree-service.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-service/demoThree-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-web/demoThree-web.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/demoThree-web/demoThree-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-model/demomvc-model.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-model/demomvc-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-service/demomvc-service.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-service/demomvc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-web/demomvc-web.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-web/demomvc-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisdemo/mybatisdemo.iml" filepath="$PROJECT_DIR$/mybatisdemo/mybatisdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redisStudty/redisStudty.iml" filepath="$PROJECT_DIR$/redisStudty/redisStudty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springbootStudy.iml" filepath="$PROJECT_DIR$/.idea/springbootStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/start/start.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/start/start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/start/start (1).iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demoThree/start/start (1).iml" />
+    </modules>
+  </component>
+</project>
