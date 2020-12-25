@@ -10,6 +10,14 @@ public interface ClassroomMapper {
 
     List<Classroom> findAll();
 
+    Classroom findByClassNo(String classNo);
+
+    int deleteClassroom(String classNo);
+
+    int updateClassroom(Classroom classroom);
+
+    int insertClassroom(Classroom classroom);
+
 
 
 }

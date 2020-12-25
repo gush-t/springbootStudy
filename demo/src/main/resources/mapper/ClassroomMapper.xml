@@ -4,4 +4,24 @@
     <select id="findAll" resultType="Classroom">
         SELECT * FROM Classroom
     </select>
+
+    <select id="findByClassNo" resultType="Classroom">
+        SELECT * FROM Classroom where classNo = #{classNo}
+    </select>
+
+    <delete id="deleteClassroom" parameterType="String">
+        DELETE FROM Classroom where classNo = #{classNo}
+    </delete>
+
+    <update id="updateClassroom" parameterType="com.example.mybatis.demo.entity.Classroom">
+        UPDATE Classroom set
+        className = #{className},
+        school = #{school}
+        where classNo = #{classNo}
+    </update>
+
+    <insert id="insertClassroom" parameterType="com.example.mybatis.demo.entity.Classroom">
+        INSERT into Classroom (classNo,className,school)
+        values (#{classNo},#{className},#{school})
+    </insert>
 </mapper>

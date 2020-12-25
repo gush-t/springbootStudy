@@ -7,4 +7,11 @@ import java.util.List;
 
 public interface ClassroomService {
     List<Classroom> findAll();
+    Classroom findByClassNo(String classNo);
+
+    int deleteClassroom(String classNo);
+
+    int updateClassroom(Classroom classroom);
+
+    int insertClassroom(Classroom classroom);
 }
