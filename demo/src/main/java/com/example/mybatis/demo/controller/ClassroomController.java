@@ -2,6 +2,7 @@ package com.example.mybatis.demo.controller;
 
 import com.example.mybatis.demo.entity.Classroom;
 import com.example.mybatis.demo.service.ClassroomService;
+import com.rabbitmq.client.Return;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,19 +28,19 @@ public class ClassroomController {
 
     @PostMapping
     @ResponseBody
-    public void insertClassroom(@RequestBody Classroom classroom){
-        classroomService.insertClassroom(classroom);
+    public int insertClassroom(@RequestBody Classroom classroom){
+       return classroomService.insertClassroom(classroom);
     }
 
     @PutMapping
     @ResponseBody
-    public  void updateClassroom(@RequestBody Classroom classroom){
-        classroomService.updateClassroom(classroom);
+    public  int updateClassroom(@RequestBody Classroom classroom){
+       return classroomService.updateClassroom(classroom);
     }
 
     @DeleteMapping
     @ResponseBody
-    public void deleteClassroom(@RequestParam String classNo){
-        classroomService.deleteClassroom(classNo);
+    public int deleteClassroom(@RequestParam String classNo){
+       return   classroomService.deleteClassroom(classNo);
     }
 }

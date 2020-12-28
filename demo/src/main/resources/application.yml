@@ -1,9 +1,10 @@
 #datasource
 spring:
+  #数据源：environment transactionManager datasource
   datasource:
     name: testDatasource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/springboot
+    url: jdbc:mysql://127.0.0.1:3306/springboot?serverTimezone=Asia/Shanghai
     username: root
     password: gu784341
     # 使用druid连接池
@@ -24,6 +25,27 @@ spring:
     #建表
     schema: classpath:schema.sql
     initialization-mode: always
+  #activemq 配置
+  activemq:
+    broker-url: tcp:192.168.51.145:61616
+    user: admin
+    password: admin
+    close-timeout: 15s # 考虑关闭之前等待时间
+    in-memory: true # 默认url代理是否在内存中，如果指定了显示代理，则忽略此值
+    send-timeout: 0 # 等待消息发送响应时间，设置为0 等待永远
+    queue-name: active.queue.01
+    topic-name: active.topic.01
+    non-blocking-redelivery: false # 启用此命令，消息顺序不会保留，（是否在回滚消息之前停止消息传递）
+    packages:
+      trust-all: true # 不配置此项会报错
+
+    pool:
+      enabled: true
+      max-connections: 10
+      idle-timeout: 30s # 空闲连接过期时间，默认为30s
+  jms:
+    pub-sub-domain: true # 默认情况下jms 提供的是queue模式，如果启用publish，subscribe ，需要设置为true
+
 
 #mybatis 配置
 mybatis:
@@ -31,3 +53,7 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   #实体类
   type-aliases-package: com.example.mybatis.demo.entity
+
+
+
+
