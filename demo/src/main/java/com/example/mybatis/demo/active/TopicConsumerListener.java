@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TopicConsumerListener {
     @JmsListener(destination = "${spring.activemq.topic-name}", containerFactory = "topicListener")
-    public void topicListener(String message){
+    public void topicListener(String message) {
         System.out.println("topic receiver：" + message);
     }
 }

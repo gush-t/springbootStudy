@@ -16,20 +16,20 @@ public class UserController {
 
     @ResponseBody
     @GetMapping(value = "list")
-    public List<User> userList(){
-       return userService.findAll();
+    public List<User> userList() {
+        return userService.findAll();
     }
 
     @ResponseBody
     @DeleteMapping
-    public void deleteUserById(@RequestParam(required = true) String id){
+    public void deleteUserById(@RequestParam(required = true) String id) {
         userService.deleteById(id);
     }
 
     @ResponseBody
     @PutMapping
     @PostMapping
-    public  void saveUser(@RequestBody User user ){
+    public void saveUser(@RequestBody User user) {
         userService.save(user);
     }
 }

@@ -13,11 +13,11 @@ public class Classroom implements Serializable {
     private String school;
 
     private Date date;
+
     public Classroom() {
     }
 
     /**
-     *
      * @param className
      * @param classNo
      * @param school

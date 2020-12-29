@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class QueueConsumerListener {
 
-    @JmsListener(destination = "${spring.activemq.queue-name}" , containerFactory = "queueListener")
-    public void readActiveQueue(String message){
+    @JmsListener(destination = "${spring.activemq.queue-name}", containerFactory = "queueListener")
+    public void readActiveQueue(String message) {
         System.out.println("queue receive: " + message);
     }
 }

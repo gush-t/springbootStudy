@@ -20,34 +20,34 @@ public class DeleteMinChar {
         //step5 删除：通过Iterator删除step4收集的字符
         //step6 转换：将处理后的List通过stream中的Collectors.joining()拼接为字符串
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String inputString ="";
+        String inputString = "";
         List<String> result = new ArrayList<>();
-        while ((inputString = reader.readLine()) !=null) {
+        while ((inputString = reader.readLine()) != null) {
             //step2 将字符串通过toChar()转换为字符数组，数组转换为stream，通过distinct()去重后，count()获取排重后
             // 获取字符数组大小numberOfDistinct
             List<CharSize> charList = new ArrayList<>();
             List<String> charStrList = new ArrayList<>();
             int size = inputString.length();
-            if (size > 0 && size<=20){
+            if (size > 0 && size <= 20) {
                 char[] charArrays = inputString.toCharArray();
                 for (int i = 0; i < size; i++) {
                     charList.add(new CharSize(String.valueOf(charArrays[i])));
                     charStrList.add(String.valueOf(charArrays[i]));
                 }
                 List<CharSize> distinctList = charList.stream().distinct().collect(Collectors.toList());
-                for (CharSize distinctStr: distinctList) {
-                    for (CharSize charStr: charList) {
-                        if (distinctStr.getCharName().equals(charStr.getCharName())){
-                            distinctStr.setSize((distinctStr.getSize())+1);
+                for (CharSize distinctStr : distinctList) {
+                    for (CharSize charStr : charList) {
+                        if (distinctStr.getCharName().equals(charStr.getCharName())) {
+                            distinctStr.setSize((distinctStr.getSize()) + 1);
                         }
                     }
                 }
-                CharSize minChar =    distinctList.stream().min((x,y) -> x.getSize() - y.getSize()).get();
+                CharSize minChar = distinctList.stream().min((x, y) -> x.getSize() - y.getSize()).get();
                 int min = minChar.getSize();
-                List<String> minCharList =  distinctList.stream().filter(s -> s.size == min).map(s -> s.getCharName()).collect(Collectors.toList());
+                List<String> minCharList = distinctList.stream().filter(s -> s.size == min).map(s -> s.getCharName()).collect(Collectors.toList());
                 Iterator iterable = charStrList.iterator();
-                while (iterable.hasNext()){
-                    if (minCharList.contains(iterable.next())){
+                while (iterable.hasNext()) {
+                    if (minCharList.contains(iterable.next())) {
                         iterable.remove();
                     }
                 }
@@ -69,14 +69,14 @@ public class DeleteMinChar {
         //step5 删除：通过Iterator删除step4收集的字符
         //step6 转换：将处理后的List通过stream中的Collectors.joining()拼接为字符串
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String inputString ="";
+        String inputString = "";
         List<String> result = new ArrayList<>();
-        while ((inputString = reader.readLine()) !=null) {
+        while ((inputString = reader.readLine()) != null) {
             List<CharSize> charList = new ArrayList<>();
             List<String> charStrList = new ArrayList<>();
             int size = inputString.length();
             char[] charArrays = inputString.toCharArray();
-            if (size > 0 && size<=20) {
+            if (size > 0 && size <= 20) {
                 //将字符数组转换为字符串List集合和CharSize的List集合
                 for (int i = 0; i < size; i++) {
                     charList.add(new CharSize(String.valueOf(charArrays[i])));
@@ -115,7 +115,7 @@ public class DeleteMinChar {
     /**
      * 字符和出现次数对应关系类
      */
-    static class CharSize{
+    static class CharSize {
         public String charName;
 
         public int size;

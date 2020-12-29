@@ -7,39 +7,40 @@ import com.example.demo.Entity.Student;
 import java.util.List;
 
 public interface StudentService {
-	
-	Student findById(Integer stuId);
 
-	/**
-	 * 
-	 * @param stuName
-	 * @param stuClass
-	 * @return
-	 */
-	//Student findByStuNameAndClass(String stuName ,String stuClass);
+    Student findById(Integer stuId);
 
-	/**
-	 *
-	 * @param page
-	 * @param size
-	 * @param stuClass
-	 * @return
-	 */
-	Page<Student> findStudentByClass(int page , int size , String stuClass);
+    /**
+     *
+     * @param stuName
+     * @param stuClass
+     * @return
+     */
+    //Student findByStuNameAndClass(String stuName ,String stuClass);
 
-	/**
-	 * 新增或者修改
-	 * @param stu
-	 */
-	void save(Student stu);
+    /**
+     * @param page
+     * @param size
+     * @param stuClass
+     * @return
+     */
+    Page<Student> findStudentByClass(int page, int size, String stuClass);
 
-	/**
-	 * 删除
-	 * @param stuId
-	 */
-	void deleteById(Integer stuId);
+    /**
+     * 新增或者修改
+     *
+     * @param stu
+     */
+    void save(Student stu);
 
-	List<Student> findAll();
+    /**
+     * 删除
+     *
+     * @param stuId
+     */
+    void deleteById(Integer stuId);
 
-	
+    List<Student> findAll();
+
+
 }

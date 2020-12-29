@@ -5,6 +5,6 @@ import java.util.List;
 import com.example.demo.dao.Student;
 
 public interface IStudentService {
-	List<Student> findAllStudent();
+    List<Student> findAllStudent();
 
 }

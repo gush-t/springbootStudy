@@ -9,61 +9,54 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-
-
 @Entity
 public class BaseEntity implements Serializable {
 
-	/**
-	 * 
-	 */
-	
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "`ID`")
-	private Integer id;
-	
-	@Column(name = "`NAME`",nullable = false)
-	private String name;
-	
-	
-	
+    /**
+     *
+     */
 
-	public BaseEntity() {
-		super();
-	}
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "`ID`")
+    private Integer id;
 
-	public BaseEntity(int id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
-	}
+    @Column(name = "`NAME`", nullable = false)
+    private String name;
 
-	@Override
-	public String toString() {
-		return "BaseEntity [id=" + id + ", name=" + name + "]";
-	}
 
-	
+    public BaseEntity() {
+        super();
+    }
 
-	public Integer getId() {
-		return id;
-	}
+    public BaseEntity(int id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    @Override
+    public String toString() {
+        return "BaseEntity [id=" + id + ", name=" + name + "]";
+    }
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
-	
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
 }

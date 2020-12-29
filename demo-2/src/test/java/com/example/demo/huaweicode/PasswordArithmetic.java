@@ -18,16 +18,16 @@ public class PasswordArithmetic {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         List<String> passwordList = new ArrayList<>();
         String plaintext = null;
-        while ((plaintext = bufferedReader.readLine()) != null){
-            StringBuffer strPassword =new StringBuffer();
-            char[] plaintextArray =  plaintext.toCharArray();
+        while ((plaintext = bufferedReader.readLine()) != null) {
+            StringBuffer strPassword = new StringBuffer();
+            char[] plaintextArray = plaintext.toCharArray();
             for (int i = 0; i < plaintextArray.length; i++) {
                 char passwordChar = plaintextArray[i];
-                if (passwordChar >= '0' && passwordChar <= '9'){
+                if (passwordChar >= '0' && passwordChar <= '9') {
                     strPassword.append(passwordChar);
-                }else if(passwordChar >= 'a' && passwordChar <= 'z'){
+                } else if (passwordChar >= 'a' && passwordChar <= 'z') {
                     strPassword.append(getLowerCaseResult(passwordChar));
-                }else if(passwordChar > 'A' && passwordChar <= 'Z'){
+                } else if (passwordChar > 'A' && passwordChar <= 'Z') {
                     strPassword.append(getUpperCase(passwordChar));
                 }
             }
@@ -45,16 +45,16 @@ public class PasswordArithmetic {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         List<String> passwordList = new ArrayList<>();
         String plaintext = null;
-        while ((plaintext = bufferedReader.readLine()) != null){
-            StringBuffer strPassword =new StringBuffer();
-           char[] plaintextArray =  plaintext.toCharArray();
+        while ((plaintext = bufferedReader.readLine()) != null) {
+            StringBuffer strPassword = new StringBuffer();
+            char[] plaintextArray = plaintext.toCharArray();
             for (int i = 0; i < plaintextArray.length; i++) {
                 char passwordChar = plaintextArray[i];
-                if (passwordChar >= '0' && passwordChar <= '9'){
+                if (passwordChar >= '0' && passwordChar <= '9') {
                     strPassword.append(passwordChar);
-                }else if(passwordChar >= 'a' && passwordChar <= 'z'){
+                } else if (passwordChar >= 'a' && passwordChar <= 'z') {
                     strPassword.append(getLowerCaseResult(passwordChar));
-                }else if(passwordChar >= 'A' && passwordChar <= 'Z'){
+                } else if (passwordChar >= 'A' && passwordChar <= 'Z') {
                     strPassword.append(getUpperCase(passwordChar));
                 }
             }
@@ -64,31 +64,31 @@ public class PasswordArithmetic {
     }
 
     private static String getUpperCase(char passwordChar) {
-        if (passwordChar == 90){
+        if (passwordChar == 90) {
             return "a";
-        }else {
-             char chatPass = (char) (passwordChar+33);
+        } else {
+            char chatPass = (char) (passwordChar + 33);
             return String.valueOf(chatPass);
         }
     }
 
     private static int getLowerCaseResult(char passwordChar) {
         String passwordStr = String.valueOf(passwordChar);
-        if ("abc".contains(passwordStr)){
+        if ("abc".contains(passwordStr)) {
             return 2;
-        }else if("def".contains(passwordStr)){
+        } else if ("def".contains(passwordStr)) {
             return 3;
-        }else if("ghi".contains(passwordStr)){
+        } else if ("ghi".contains(passwordStr)) {
             return 4;
-        }else if("jkl".contains(passwordStr)){
+        } else if ("jkl".contains(passwordStr)) {
             return 5;
-        }else if("mno".contains(passwordStr)){
+        } else if ("mno".contains(passwordStr)) {
             return 6;
-        }else if("pqrs".contains(passwordStr)){
+        } else if ("pqrs".contains(passwordStr)) {
             return 7;
-        }else if("tuv".contains(passwordStr)){
+        } else if ("tuv".contains(passwordStr)) {
             return 8;
-        }else{
+        } else {
             return 9;
         }
     }

@@ -21,27 +21,27 @@ import java.util.concurrent.ConcurrentHashMap;
 public class RedisTemplateTest {
 
     @Autowired
-    private RedisTemplate<String,Object> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
     @Autowired
-    private  RedisTemplate<String,String> stringRedisTemplate;
+    private RedisTemplate<String, String> stringRedisTemplate;
 
     @Test
-    public void redisTemplateTest(){
+    public void redisTemplateTest() {
         //String
-        ValueOperations<String,Object> valueObject= redisTemplate.opsForValue();
-        valueObject.set("hello",new User("1","Tom"));
+        ValueOperations<String, Object> valueObject = redisTemplate.opsForValue();
+        valueObject.set("hello", new User("1", "Tom"));
         System.out.println(valueObject.get("hello"));
-        HashOperations<String,String,Object> hashOperations =  redisTemplate.opsForHash();
-        Map<String,String> map = new ConcurrentHashMap<>();
-        map.put("hello","world");
-        map.put("hello1","world1");
-        map.put("hello2","world2");
-        hashOperations.putAll("table",map);
-        String str = (String) hashOperations.get("table","hello2");
-        Assertions.assertEquals("world2",str);
-        Set<String> set =  hashOperations.keys("table");
+        HashOperations<String, String, Object> hashOperations = redisTemplate.opsForHash();
+        Map<String, String> map = new ConcurrentHashMap<>();
+        map.put("hello", "world");
+        map.put("hello1", "world1");
+        map.put("hello2", "world2");
+        hashOperations.putAll("table", map);
+        String str = (String) hashOperations.get("table", "hello2");
+        Assertions.assertEquals("world2", str);
+        Set<String> set = hashOperations.keys("table");
         set.stream().forEach(System.out::println);
-        List<Object> list =  hashOperations.values("table");
+        List<Object> list = hashOperations.values("table");
         list.stream().forEach(System.out::println);
 
     }

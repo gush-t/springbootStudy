@@ -7,11 +7,10 @@ import javax.persistence.Table;
 @Table(name = "`STUDENT`")
 public class Student extends BaseEntity {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
 
 }

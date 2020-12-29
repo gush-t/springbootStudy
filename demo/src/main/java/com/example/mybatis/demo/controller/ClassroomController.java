@@ -16,7 +16,7 @@ public class ClassroomController {
 
     @GetMapping("all/")
     @ResponseBody
-    public List<Classroom> findAll(){
+    public List<Classroom> findAll() {
         return classroomService.findAll();
     }
 
@@ -28,19 +28,19 @@ public class ClassroomController {
 
     @PostMapping
     @ResponseBody
-    public int insertClassroom(@RequestBody Classroom classroom){
-       return classroomService.insertClassroom(classroom);
+    public int insertClassroom(@RequestBody Classroom classroom) {
+        return classroomService.insertClassroom(classroom);
     }
 
     @PutMapping
     @ResponseBody
-    public  int updateClassroom(@RequestBody Classroom classroom){
-       return classroomService.updateClassroom(classroom);
+    public int updateClassroom(@RequestBody Classroom classroom) {
+        return classroomService.updateClassroom(classroom);
     }
 
     @DeleteMapping
     @ResponseBody
-    public int deleteClassroom(@RequestParam String classNo){
-       return   classroomService.deleteClassroom(classNo);
+    public int deleteClassroom(@RequestParam String classNo) {
+        return classroomService.deleteClassroom(classNo);
     }
 }

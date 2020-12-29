@@ -12,17 +12,17 @@ import com.example.demo.service.IStudentService;
 
 @RestController
 public class StudentController {
-	
-	@Autowired
-	private IStudentService studentService;
-	
-	@RequestMapping(name = "/getAll")
-	@ResponseBody
-	public List<Student> getAllStudent() {
-		
-		return studentService.findAllStudent();
-		
-		
-	}
+
+    @Autowired
+    private IStudentService studentService;
+
+    @RequestMapping(name = "/getAll")
+    @ResponseBody
+    public List<Student> getAllStudent() {
+
+        return studentService.findAllStudent();
+
+
+    }
 
 }

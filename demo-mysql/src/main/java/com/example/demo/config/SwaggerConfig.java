@@ -15,14 +15,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-	public Docket createApi() {
-		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.any()).build();
-	}
+    public Docket createApi() {
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any()).build();
+    }
 
-	public ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("student Api").description(" gu shao hua test spring boot jpa api")
-				.version("1.1.0").build();
-	}
+    public ApiInfo apiInfo() {
+        return new ApiInfoBuilder().title("student Api").description(" gu shao hua test spring boot jpa api")
+                .version("1.1.0").build();
+    }
 
 }

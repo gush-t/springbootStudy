@@ -7,24 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="redisStudty" />
-        <module name="mybatisdemo" />
-        <module name="demo" />
-        <module name="demo-2" />
-        <module name="demo-mysql" />
-      </profile>
-      <profile name="Annotation profile for demoThree" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="demoThree-dao" />
         <module name="demomvc-model" />
+        <module name="mybatisdemo" />
+        <module name="start" />
+        <module name="demo" />
+        <module name="demoThree-manager" />
+        <module name="demo-2" />
+        <module name="demomvc-service" />
+        <module name="rabbitmq-cosumer" />
+        <module name="demoThree-dao" />
         <module name="demoThree-web" />
         <module name="demoThree-service" />
         <module name="demoThree-api" />
-        <module name="start" />
-        <module name="demoThree-manager" />
+        <module name="demo-mysql" />
         <module name="start (1)" />
-        <module name="demomvc-service" />
         <module name="demomvc-web" />
       </profile>
     </annotationProcessing>
@@ -43,6 +39,7 @@
       <module name="demoThree-service" target="1.8" />
       <module name="demoThree-web" target="1.8" />
       <module name="mybatisdemo" target="1.8" />
+      <module name="rabbitmq-cosumer" target="1.8" />
       <module name="redisStudty" target="1.8" />
       <module name="start" target="1.8" />
       <module name="start (1)" target="1.8" />

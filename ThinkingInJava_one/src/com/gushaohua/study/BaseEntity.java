@@ -5,114 +5,112 @@ import java.util.Date;
 
 /**
  * 基础类
+ *
  * @author gushaohua
  * @createTime 2020年4月15日
  */
 public class BaseEntity implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 自增字段
-	 */
-	private Integer Id;
-	
-	private String createUser;
-	
-	private String modifyUser;
-	
-	private Date createTime;
-	
-	private Date modifyTime;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	//TODO 重写equals和hashcode的方法
-	
-	
-	
-	/**
-	 * 还可以进行重写equals和hashcode的method
-	 */
-	
-	/**
-	 * @return the id
-	 */
-	public Integer getId() {
-		return Id;
-	}
+    /**
+     * 自增字段
+     */
+    private Integer Id;
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Integer id) {
-		Id = id;
-	}
+    private String createUser;
 
-	/**
-	 * @return the createUser
-	 */
-	public String getCreateUser() {
-		return createUser;
-	}
+    private String modifyUser;
 
-	/**
-	 * @param createUser the createUser to set
-	 */
-	public void setCreateUser(String createUser) {
-		this.createUser = createUser;
-	}
+    private Date createTime;
 
-	/**
-	 * @return the modifyUser
-	 */
-	public String getModifyUser() {
-		return modifyUser;
-	}
+    private Date modifyTime;
 
-	/**
-	 * @param modifyUser the modifyUser to set
-	 */
-	public void setModifyUser(String modifyUser) {
-		this.modifyUser = modifyUser;
-	}
+    //TODO 重写equals和hashcode的方法
 
-	/**
-	 * @return the createTime
-	 */
-	public Date getCreateTime() {
-		return createTime;
-	}
 
-	/**
-	 * @param createTime the createTime to set
-	 */
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    /**
+     * 还可以进行重写equals和hashcode的method
+     */
 
-	/**
-	 * @return the modifyTime
-	 */
-	public Date getModifyTime() {
-		return modifyTime;
-	}
+    /**
+     * @return the id
+     */
+    public Integer getId() {
+        return Id;
+    }
 
-	/**
-	 * @param modifyTime the modifyTime to set
-	 */
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        Id = id;
+    }
 
-	@Override
-	public String toString() {
-		return "BaseEntiy [Id=" + Id + ", createUser=" + createUser + ", modifyUser=" + modifyUser + ", createTime="
-				+ createTime + ", modifyTime=" + modifyTime + "]";
-	}
-	
-	
-	
+    /**
+     * @return the createUser
+     */
+    public String getCreateUser() {
+        return createUser;
+    }
+
+    /**
+     * @param createUser the createUser to set
+     */
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser;
+    }
+
+    /**
+     * @return the modifyUser
+     */
+    public String getModifyUser() {
+        return modifyUser;
+    }
+
+    /**
+     * @param modifyUser the modifyUser to set
+     */
+    public void setModifyUser(String modifyUser) {
+        this.modifyUser = modifyUser;
+    }
+
+    /**
+     * @return the createTime
+     */
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * @param createTime the createTime to set
+     */
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * @return the modifyTime
+     */
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    /**
+     * @param modifyTime the modifyTime to set
+     */
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseEntiy [Id=" + Id + ", createUser=" + createUser + ", modifyUser=" + modifyUser + ", createTime="
+                + createTime + ", modifyTime=" + modifyTime + "]";
+    }
+
 
 }

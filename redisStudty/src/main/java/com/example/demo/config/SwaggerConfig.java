@@ -13,12 +13,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    public ApiInfo apiInfo(){
+    public ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("redis test apiInfo").description("Tom is a handsome")
                 .version("redis.1.1").build();
     }
 
-    public Docket createApi(){
+    public Docket createApi() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
     }

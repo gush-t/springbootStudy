@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Table(name = "teacher")
 @Entity
-public class Teacher  extends BaseEntity {
+public class Teacher extends BaseEntity {
 
     @Column(name = "`teacherAge`")
     private String teacherAge;

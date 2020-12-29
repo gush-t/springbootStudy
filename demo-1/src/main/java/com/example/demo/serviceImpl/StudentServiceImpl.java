@@ -12,13 +12,13 @@ import com.example.demo.service.IStudentService;
 @Service
 public class StudentServiceImpl implements IStudentService {
 
-	@Autowired
-	private IStudentDaoMgr studentDaoMgr;
-	
-	@Override
-	public List<Student> findAllStudent() {
-		
-		return studentDaoMgr.findAllStu();
-	}
+    @Autowired
+    private IStudentDaoMgr studentDaoMgr;
+
+    @Override
+    public List<Student> findAllStudent() {
+
+        return studentDaoMgr.findAllStu();
+    }
 
 }

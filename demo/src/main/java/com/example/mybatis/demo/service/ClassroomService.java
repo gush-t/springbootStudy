@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ClassroomService {
     List<Classroom> findAll();
+
     Classroom findByClassNo(String classNo);
 
     int deleteClassroom(String classNo);

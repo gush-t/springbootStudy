@@ -28,31 +28,31 @@ public class ActiveMQConfig {
     private String activeTopic;
 
     @Bean(name = "queue")
-    public Queue queue(){
+    public Queue queue() {
         return new ActiveMQQueue(activeQueue);
     }
 
     @Bean(name = "topic")
-    public Topic topic(){
-        return  new ActiveMQTopic(activeTopic);
+    public Topic topic() {
+        return new ActiveMQTopic(activeTopic);
     }
 
     @Bean
-    public ConnectionFactory connectionFactory(){
-        return new ActiveMQConnectionFactory(activeName,activePassword,brokerUrl);
+    public ConnectionFactory connectionFactory() {
+        return new ActiveMQConnectionFactory(activeName, activePassword, brokerUrl);
     }
 
     @Bean
-    public JmsMessagingTemplate jmsMessagingTemplate(){
-        return  new JmsMessagingTemplate(connectionFactory());
+    public JmsMessagingTemplate jmsMessagingTemplate() {
+        return new JmsMessagingTemplate(connectionFactory());
     }
+
     /**
-     *
      * @param connectionFactory
      * @return
      */
     @Bean(name = "queueListener")
-    public JmsListenerContainerFactory<?> queueJmsListenerContainerFactory(ConnectionFactory connectionFactory){
+    public JmsListenerContainerFactory<?> queueJmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setPubSubDomain(false);
@@ -60,12 +60,11 @@ public class ActiveMQConfig {
     }
 
     /**
-     *
      * @param connectionFactory
      * @return
      */
     @Bean(name = "topicListener")
-    public JmsListenerContainerFactory<?> topicJmsListenerContainerFactory(ConnectionFactory connectionFactory){
+    public JmsListenerContainerFactory<?> topicJmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setPubSubDomain(true);

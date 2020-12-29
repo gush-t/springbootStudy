@@ -10,31 +10,29 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.Entity.Student;
 
 @Repository
-public interface StudentDao  extends JpaRepository<Student, Integer>{
+public interface StudentDao extends JpaRepository<Student, Integer> {
 
-	/**
-	 * 
-	 * @param stuName
-	 * @param stuClass
-	 * @return
-	 */
-	//Student findByStuNameAndClass(String stuName ,String stuClass);
-	
-	/**
-	 * 
-	 * @param stuAge
-	 * @return
-	 */
-	@Query( value = "select * form student where stuAge = ?1", nativeQuery = true)
-	Student findByStuAge(Integer stuAge);
-	
-	/**
-	 * 
-	 * @param specification
-	 * @param pageable
-	 * @return
-	 */
-	Page<Student> findStudentByClass(Specification<Student> specification,Pageable pageable);
-	
-	
+    /**
+     *
+     * @param stuName
+     * @param stuClass
+     * @return
+     */
+    //Student findByStuNameAndClass(String stuName ,String stuClass);
+
+    /**
+     * @param stuAge
+     * @return
+     */
+    @Query(value = "select * form student where stuAge = ?1", nativeQuery = true)
+    Student findByStuAge(Integer stuAge);
+
+    /**
+     * @param specification
+     * @param pageable
+     * @return
+     */
+    Page<Student> findStudentByClass(Specification<Student> specification, Pageable pageable);
+
+
 }

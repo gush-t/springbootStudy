@@ -12,90 +12,86 @@ import javax.persistence.Table;
 @Table(name = "student")
 @Entity
 public class Student implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO )
-	@Column(name = "`stuId`")
-	public Integer stuId;
-	
-	@Column(name = "`STUNAME`")
-	public String stuName;
-	
-	@Column(name = "`STUCLASS`")
-	public String stuClass;
-	@Column(name = "`STUSEX`")
-	public String stuSex;
-	@Column(name = "`STUAGE`")
-	public Integer stuAge;
-	
-	public Student() {
-		super();
-	}
-	
-	
-	public Student(Integer stuId, String stuName, String stuClass, String stuSex, Integer stuAge) {
-		super();
-		this.stuId = stuId;
-		this.stuName = stuName;
-		this.stuClass = stuClass;
-		this.stuSex = stuSex;
-		this.stuAge = stuAge;
-	}
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	@Override
-	public String toString() {
-		return "Student [stuId=" + stuId + ", stuName=" + stuName + ", stuClass=" + stuClass + ", stuSex=" + stuSex
-				+ ", stuAge=" + stuAge + "]";
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "`stuId`")
+    public Integer stuId;
 
-	public Integer getStuId() {
-		return stuId;
-	}
+    @Column(name = "`STUNAME`")
+    public String stuName;
 
-	public void setStuId(Integer stuId) {
-		this.stuId = stuId;
-	}
+    @Column(name = "`STUCLASS`")
+    public String stuClass;
+    @Column(name = "`STUSEX`")
+    public String stuSex;
+    @Column(name = "`STUAGE`")
+    public Integer stuAge;
 
-	public String getStuName() {
-		return stuName;
-	}
+    public Student() {
+        super();
+    }
 
-	public void setStuName(String stuName) {
-		this.stuName = stuName;
-	}
 
-	public String getStuClass() {
-		return stuClass;
-	}
+    public Student(Integer stuId, String stuName, String stuClass, String stuSex, Integer stuAge) {
+        super();
+        this.stuId = stuId;
+        this.stuName = stuName;
+        this.stuClass = stuClass;
+        this.stuSex = stuSex;
+        this.stuAge = stuAge;
+    }
 
-	public void setStuClass(String stuClass) {
-		this.stuClass = stuClass;
-	}
+    @Override
+    public String toString() {
+        return "Student [stuId=" + stuId + ", stuName=" + stuName + ", stuClass=" + stuClass + ", stuSex=" + stuSex
+                + ", stuAge=" + stuAge + "]";
+    }
 
-	public String getStuSex() {
-		return stuSex;
-	}
+    public Integer getStuId() {
+        return stuId;
+    }
 
-	public void setStuSex(String stuSex) {
-		this.stuSex = stuSex;
-	}
+    public void setStuId(Integer stuId) {
+        this.stuId = stuId;
+    }
 
-	public Integer getStuAge() {
-		return stuAge;
-	}
+    public String getStuName() {
+        return stuName;
+    }
 
-	public void setStuAge(Integer stuAge) {
-		this.stuAge = stuAge;
-	}
-	
-	
-	
-	
-	
+    public void setStuName(String stuName) {
+        this.stuName = stuName;
+    }
+
+    public String getStuClass() {
+        return stuClass;
+    }
+
+    public void setStuClass(String stuClass) {
+        this.stuClass = stuClass;
+    }
+
+    public String getStuSex() {
+        return stuSex;
+    }
+
+    public void setStuSex(String stuSex) {
+        this.stuSex = stuSex;
+    }
+
+    public Integer getStuAge() {
+        return stuAge;
+    }
+
+    public void setStuAge(Integer stuAge) {
+        this.stuAge = stuAge;
+    }
+
 
 }

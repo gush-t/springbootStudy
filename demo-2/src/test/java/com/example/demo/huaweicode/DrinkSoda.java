@@ -19,9 +19,9 @@ public class DrinkSoda {
         List<Integer> resultList = new ArrayList<>();
 
         //step2 处理一个空瓶子数值可以置换多少瓶汽水
-        while ((emptyNumber = Integer.valueOf(scanner.nextLine())) != 0 ){
+        while ((emptyNumber = Integer.valueOf(scanner.nextLine())) != 0) {
 
-            if(emptyNumber >0 && emptyNumber <=100) {
+            if (emptyNumber > 0 && emptyNumber <= 100) {
                 int sodaNumber = 0;
                 while (true) {
                     int quotients = emptyNumber / 3;
@@ -32,7 +32,7 @@ public class DrinkSoda {
                             sodaNumber = quotients + sodaNumber + 1;
                         }
                         break;
-                    }else {
+                    } else {
                         sodaNumber = quotients + sodaNumber;
                     }
                     System.out.println(sodaNumber);
@@ -44,7 +44,7 @@ public class DrinkSoda {
     }
 
     @Test
-    public void drinkSodaTest(){
+    public void drinkSodaTest() {
         //喝汽水，3个空瓶子换一瓶汽水，
         // 最后如果剩下两个空瓶，可以和老板进行置换
         //这个转换为数学问题，就是商和余数的问题,能被3整除，商和余数相加在除以3，直到商为0
@@ -55,8 +55,8 @@ public class DrinkSoda {
         List<Integer> resultList = new ArrayList<>();
 
         //step2 处理一个空瓶子数值可以置换多少瓶汽水
-        while ((emptyNumber = Integer.valueOf(scanner.nextLine())) != 0 ){
-            if(emptyNumber >0 && emptyNumber <=100) {
+        while ((emptyNumber = Integer.valueOf(scanner.nextLine())) != 0) {
+            if (emptyNumber > 0 && emptyNumber <= 100) {
                 while (true) {
                     int quotients = emptyNumber / 3;
                     int remainders = emptyNumber % 3;

@@ -20,19 +20,19 @@ public class ProductController {
     @Autowired
     private Topic topic;
 
-    public void sendMessage(Destination destination, String message){
-        jmsMessagingTemplate.convertAndSend(destination,message);
+    public void sendMessage(Destination destination, String message) {
+        jmsMessagingTemplate.convertAndSend(destination, message);
     }
 
     @PostMapping("queue/test")
-    public String queueSend(@RequestBody String string){
-        this.sendMessage(this.queue,string);
+    public String queueSend(@RequestBody String string) {
+        this.sendMessage(this.queue, string);
         return "success";
     }
 
     @PostMapping("topic/test")
-    public String topicSend(@RequestBody String string){
-        this.sendMessage(this.topic,string);
-        return  "success";
+    public String topicSend(@RequestBody String string) {
+        this.sendMessage(this.topic, string);
+        return "success";
     }
 }

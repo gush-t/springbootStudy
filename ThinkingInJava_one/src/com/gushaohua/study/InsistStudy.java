@@ -3,79 +3,76 @@ package com.gushaohua.study;
 import java.util.Date;
 
 public class InsistStudy extends BaseEntity {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
-	private boolean insist;
-	
-	private Date studyTime;
-	
-	private int insistNumber;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	
-	
-	
-	public InsistStudy() {
-		super();
-	}
+    private boolean insist;
 
-	public InsistStudy(boolean insist, Date studyTime, int insistNumber) {
-		super();
-		this.insist = insist;
-		this.studyTime = studyTime;
-		this.insistNumber = insistNumber;
-	}
+    private Date studyTime;
 
-	@Override
-	public String toString() {
-		return "InsistStudy [insist=" + insist + ", studyTime=" + studyTime + ", insistNumber=" + insistNumber + "]";
-	}
+    private int insistNumber;
 
-	/**
-	 * @return the insist
-	 */
-	public boolean isInsist() {
-		return insist;
-	}
 
-	/**
-	 * @param insist the insist to set
-	 */
-	public void setInsist(boolean insist) {
-		this.insist = insist;
-	}
+    public InsistStudy() {
+        super();
+    }
 
-	/**
-	 * @return the studyTime
-	 */
-	public Date getStudyTime() {
-		return studyTime;
-	}
+    public InsistStudy(boolean insist, Date studyTime, int insistNumber) {
+        super();
+        this.insist = insist;
+        this.studyTime = studyTime;
+        this.insistNumber = insistNumber;
+    }
 
-	/**
-	 * @param studyTime the studyTime to set
-	 */
-	public void setStudyTime(Date studyTime) {
-		this.studyTime = studyTime;
-	}
+    @Override
+    public String toString() {
+        return "InsistStudy [insist=" + insist + ", studyTime=" + studyTime + ", insistNumber=" + insistNumber + "]";
+    }
 
-	/**
-	 * @return the insistNumber
-	 */
-	public int getInsistNumber() {
-		return insistNumber;
-	}
+    /**
+     * @return the insist
+     */
+    public boolean isInsist() {
+        return insist;
+    }
 
-	/**
-	 * @param insistNumber the insistNumber to set
-	 */
-	public void setInsistNumber(int insistNumber) {
-		this.insistNumber = insistNumber;
-	}
-	
-	
+    /**
+     * @param insist the insist to set
+     */
+    public void setInsist(boolean insist) {
+        this.insist = insist;
+    }
+
+    /**
+     * @return the studyTime
+     */
+    public Date getStudyTime() {
+        return studyTime;
+    }
+
+    /**
+     * @param studyTime the studyTime to set
+     */
+    public void setStudyTime(Date studyTime) {
+        this.studyTime = studyTime;
+    }
+
+    /**
+     * @return the insistNumber
+     */
+    public int getInsistNumber() {
+        return insistNumber;
+    }
+
+    /**
+     * @param insistNumber the insistNumber to set
+     */
+    public void setInsistNumber(int insistNumber) {
+        this.insistNumber = insistNumber;
+    }
+
 
 }

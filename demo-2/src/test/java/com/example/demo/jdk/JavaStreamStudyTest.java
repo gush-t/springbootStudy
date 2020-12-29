@@ -20,36 +20,38 @@ public class JavaStreamStudyTest {
 
     private static String threadStrA = "a";
     private static String threadStrB = "b";
+
     @Test
-    public void predicateTest(){
+    public void predicateTest() {
         //流式处理，中间操作（intermediate operation）和中止操作（terminal operation）
-        Integer[] intArray = {1,2,3,4,5,6,7,8,9,10,1,2,3,2,6,23};// 数组和list之间的转换
-        List<Integer> list = new   ArrayList<Integer>(Arrays.asList(intArray));
-        list.stream().filter(s -> s >10).map(s -> {if (s > 10 ){
-            return 1314;
-        }else {
-            return 520;
-        }
+        Integer[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 2, 6, 23};// 数组和list之间的转换
+        List<Integer> list = new ArrayList<Integer>(Arrays.asList(intArray));
+        list.stream().filter(s -> s > 10).map(s -> {
+            if (s > 10) {
+                return 1314;
+            } else {
+                return 520;
+            }
         }).limit(10).distinct().sorted().forEach(System.out::println);
 
     }
 
     @Test
-    public void deadLockTest(){
+    public void deadLockTest() {
 
-        Thread threadA  = new Thread(() -> {
-            synchronized (threadStrA){
-               // Thread.currentThread().
+        Thread threadA = new Thread(() -> {
+            synchronized (threadStrA) {
+                // Thread.currentThread().
                 System.out.println("threadA --> threadA");
-                synchronized (threadStrB){
+                synchronized (threadStrB) {
                     System.out.println("threadA --> threadB");
                 }
             }
         });
-        Thread threadB  = new Thread(() -> {
-            synchronized (threadStrB){
+        Thread threadB = new Thread(() -> {
+            synchronized (threadStrB) {
                 System.out.println("threadB --> threadB");
-                synchronized (threadStrA){
+                synchronized (threadStrA) {
                     System.out.println("threadB --> threadA");
                 }
             }
@@ -59,8 +61,9 @@ public class JavaStreamStudyTest {
             threadB.start();
         }
     }
+
     @Test
-    public void valueTest(){
+    public void valueTest() {
         String a = "sdfsd";
         Student stu = new Student();
         modificationStu(stu);
@@ -76,8 +79,8 @@ public class JavaStreamStudyTest {
         //获取java线程managerBean
         ThreadMXBean managerThread = ManagementFactory.getThreadMXBean();
         //获取
-        ThreadInfo[] threadInfoArray = managerThread.dumpAllThreads(true,true);
-        for (int i = 0; i <threadInfoArray.length ; i++) {
+        ThreadInfo[] threadInfoArray = managerThread.dumpAllThreads(true, true);
+        for (int i = 0; i < threadInfoArray.length; i++) {
             System.out.println(threadInfoArray[i].toString());
         }
     }

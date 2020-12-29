@@ -27,7 +27,7 @@ spring:
     initialization-mode: always
   #activemq 配置
   activemq:
-    broker-url: tcp:192.168.51.145:61616
+    broker-url: tcp://192.168.51.145:61616
     user: admin
     password: admin
     close-timeout: 15s # 考虑关闭之前等待时间

@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Cacheable
     public User findById(String id) {
-        return userDao.findById(id).orElse(new User("1","Bob"));
+        return userDao.findById(id).orElse(new User("1", "Bob"));
     }
 
     @Override

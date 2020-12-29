@@ -16,6 +16,8 @@
       <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-service/demomvc-service.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-service/demomvc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-web/demomvc-web.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/demomvc-web/demomvc-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatisdemo/mybatisdemo.iml" filepath="$PROJECT_DIR$/mybatisdemo/mybatisdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-cosumer.iml" filepath="$PROJECT_DIR$/rabbitmq-cosumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-product.iml" filepath="$PROJECT_DIR$/rabbitmq-product.iml" />
       <module fileurl="file://$PROJECT_DIR$/redisStudty/redisStudty.iml" filepath="$PROJECT_DIR$/redisStudty/redisStudty.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springbootStudy.iml" filepath="$PROJECT_DIR$/.idea/springbootStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/start/start.iml" filepath="$PROJECT_DIR$/../../../../work/workSpace-springboot-0904/demomvc/start/start.iml" />
